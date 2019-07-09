@@ -29,7 +29,8 @@
             "styles": [
               "src/styles.scss",
               "node_modules/spectre.css/dist/spectre.min.css",
-              "node_modules/spectre.css/dist/spectre-icons.css"
+              "node_modules/spectre.css/dist/spectre-icons.css",
+              "theming.scss"
             ],
             "scripts": []
           },
