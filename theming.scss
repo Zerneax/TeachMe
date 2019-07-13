@@ -1,4 +1,6 @@
 
+
+
 $primary-color: #465775;//#59C9A5;
 $secondary-color: #BBBBBF;//#8EA8C3;
 $dark-color: #465775;
@@ -6,6 +8,11 @@ $light-color: #F7F5FB;
 $sucess-color: #56E39F;
 $warning-color: #66758c;
 $error-color: #EF6F6C;
-$base-font-family: "Trebuchet MS", Helvetica, sans-serif;
-$mono-font-family: "Trebuchet MS", Helvetica, sans-serif;
+$base-font-family: "Muli";//, Helvetica, sans-serif;
+$mono-font-family: "Muli";//, Helvetica, sans-serif;
 @import "node_modules/spectre.css/src/spectre";
+
+@font-face {
+  font-family: 'Muli';
+  src: url("./src/assets/Muli-Regular.ttf") format("truetype");
+}

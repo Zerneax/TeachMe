@@ -18,4 +18,16 @@
   border-right: 2px solid #59C9A5;
   min-width: 80px;
   max-width: 80px;
+  animation: icon .7s ease;
+}
+
+
+
+@keyframes icon {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

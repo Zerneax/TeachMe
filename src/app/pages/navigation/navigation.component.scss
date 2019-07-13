@@ -1,16 +1,12 @@
-div {
-    animation: icon .7s ease;
-}
 
 .calcul {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAq1BMVEUAAAC7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u7+7u78BQ6NOAAAAOHRSTlMAAQQFBgcJCgsNDg8QERIUFRYXGRojJicoKSowMTIzNDU3OFWUm56iuby+wMHDxdfZ3N7m6+3x9XfoAuAAAADqSURBVDjLvZPLUsJAFAV7wpDEEDQERREFUQwSEfEF5/+/zMVUNFZNjC60F3M2velbNZC/qIn9OcBGzewNIE3xk0sWcK+XfxS6bcJN13qZVsI3/FDYDkz2KN33zPBZKt0UQWdZCSPgREqBMylxE0JUCTEQSgaIP6ZecQVcSMfAtZS7SaFfCW+X8eRVejqN5ztpO4rnO6nMsvUfZy6CYOHJHLvMsWTBVkLUljkDJtLwS2Zd8GbWBS+/EsoeyUpaRvQ3UuGmLhwBh1IHyKTATatQv8Mq4eBOKkLStXTr5vOSD21/c9D2u8E2YYB3yypxP8CsRs8AAAAASUVORK5CYII=");
   background-repeat: no-repeat;
   background-position: center;
-
 }
 
 .calcul:hover {
-  animation: zoom .1s linear;
+  animation: zoom .5s infinite ease-out;
 }
 
 .gamepad {
@@ -20,7 +16,7 @@ div {
 }
 
 .gamepad:hover {
-  animation: zoom .1s linear;
+  animation: zoom .5s infinite ease-out;
 }
 
 label {
@@ -35,23 +31,14 @@ label {
 }
 
 .icon-margin {
-  margin-top: 3rem;
+  margin-top: 6rem;
 }
 
 @keyframes zoom {
   25% {
-    transform: translateY(.4em);
+    transform: translateY(.2em);
   }
   100% {
     transform: translateY(0);
-  }
-}
-
-@keyframes icon {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
   }
 }

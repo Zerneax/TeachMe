@@ -6,7 +6,13 @@
   max-height: 5%;
 }
 
-p {
+span {
   font-size: .5rem;
-  font-weight: 200;
+}
+
+
+.love {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAS1BMVEUAAADbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSXbDSVxDEY7AAAAGHRSTlMAAQIFHiAiKisxMjg6XF1seHuqud7m6P1jEqg6AAAAP0lEQVQIHVXB2xZAIBRF0UVyJyra//+lGo3zYk76MwbnQjw6bkk5S7p4ZR6STGKUGWBXs1GtqhaauZQJ4z1/H24BBTx+Q7HPAAAAAElFTkSuQmCC");
+  background-repeat: no-repeat;
+  background-position: center;
 }
