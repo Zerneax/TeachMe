@@ -1,0 +1,78 @@
+<div class="container p-2 text-center" [ngClass]="{'loading': loadingGeneration}">
+  <div class="centered">
+    <div class="toast toast-error" *ngIf="errorMessage.display">
+      <div class="header">
+        {{errorMessage.header}}
+      </div>
+      <p>{{errorMessage.information}}</p>
+    </div>
+    <form class="form-group pt-2" [formGroup]="generateForm" (ngSubmit)="submit()">
+
+        <div class="form-group">
+          <label class="text-secondary">Nombre A </label>
+          <div class="divider"></div>
+          <div class="input-group m-2">
+            <span class="input-group-addon">Entre</span>
+            <input class="form-input" type="number" min="0" name="minA" placeholder="..." formControlName="minA" (input)="checkBornes()">
+
+            <span class="input-group-addon ml-2">Et</span>
+            <input class="form-input" type="number" [min]="generateForm.value['minA'] + 1" name="maxA" placeholder="..." formControlName="maxA" (input)="checkBornes()">
+          </div>
+
+          <div class="pt-2"></div>
+          <label class="text-secondary">Nombre B </label>
+          <div class="divider"></div>
+          <div class="input-group m-2">
+            <span class="input-group-addon">Entre</span>
+            <input class="form-input" type="number" min="0" name="minB" placeholder="..." formControlName="minB" (input)="checkBornes()">
+
+            <span class="input-group-addon ml-2">Et</span>
+            <input class="form-input" type="number" [min]="generateForm.value['minB'] + 1" name="maxB" placeholder="..." formControlName="maxB" (input)="checkBornes()">
+
+            <label class="form-checkbox ml-2 tooltip tooltip-left" data-tooltip="Indique que la valeur B sera toujours inférieure à A pour les soustractions">
+              <input type="checkbox" name="add" id="add" formControlName="bUnderA" (change)="checkBornes(); checkMaxDifferentCalculations()">
+              <i class="form-icon"></i> B < A
+            </label>
+          </div>
+
+          <div class="input-group m-2">
+              <label class="form-checkbox ml-2 tooltip tooltip-bottom" data-tooltip="Indique que la valeur B sera toujours inférieure à A pour les soustractions">
+                <input type="checkbox" name="add" id="add" formControlName="add">
+                <i class="form-icon"></i> Addition
+              </label>
+              <ng-container *ngIf="generateForm.value['add']">
+                  <input class="form-input" type="number" min="0" max="500" name="nbAdd" placeholder="nb" formControlName="nbAdd" (input)="checkMaxDifferentCalculations()">
+              </ng-container>
+
+              <label class="form-checkbox ml-2 tooltip tooltip-bottom" data-tooltip="Indique que la valeur B sera toujours inférieure à A pour les soustractions">
+                <input type="checkbox" name="sub" id="sub" formControlName="sub">
+                <i class="form-icon"></i> Soustraction
+              </label>
+              <ng-container *ngIf="generateForm.value['sub']">
+                  <input class="form-input" type="number" min="0" max="500" name="nbSub" placeholder="nb" formControlName="nbSub" (input)="checkMaxDifferentCalculations()">
+              </ng-container>
+
+
+              <label class="form-checkbox ml-2 tooltip tooltip-bottom" data-tooltip="Indique que la valeur B sera toujours inférieure à A pour les soustractions">
+                <input type="checkbox" name="mul" id="mul" formControlName="mul">
+                <i class="form-icon"></i> Multiplication
+              </label>
+              <ng-container *ngIf="generateForm.value['mul']">
+                  <input class="form-input input-sm" type="number" min="0" max="500" name="nbMul" placeholder="nb" formControlName="nbMul" (input)="checkMaxDifferentCalculations()">
+              </ng-container>
+
+              <label class="form-checkbox ml-2 tooltip tooltip-bottom" data-tooltip="Indique que la valeur B sera toujours inférieure à A pour les soustractions">
+                <input type="checkbox" name="div" id="div" formControlName="div">
+                <i class="form-icon"></i> Division
+              </label>
+              <ng-container *ngIf="generateForm.value['div']">
+                  <input class="form-input" type="number" min="0" max="500" name="nbDiv" placeholder="nb" formControlName="nbDiv" (input)="checkMaxDifferentCalculations()">
+              </ng-container>
+          </div>
+
+        </div>
+
+        <button class="btn btn-primary mt-2" type="submit" [disabled]="generateForm.invalid || errorMessage.display"> Générer PDF </button>
+      </form>
+  </div>
+</div>

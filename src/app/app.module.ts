@@ -1,12 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { NavigationComponent } from './pages/navigation/navigation.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
+import { CalculComponent } from './pages/calcul/calcul.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
     HeaderComponent,
     NavigationComponent,
     FooterComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    CalculComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
