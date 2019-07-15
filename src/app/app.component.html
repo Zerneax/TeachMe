@@ -1,6 +1,6 @@
 <div class="container">
   <div class="columns hg-100">
-    <section class="column col-1 bg-dark navigation">
+    <section class="column col-1 bg-dark navigation" *ngIf="this.router.url != '/'">
 
       <app-navigation></app-navigation>
 
