@@ -91,12 +91,12 @@ export class CalculComponent implements OnInit {
     checkBornes() {
       if(this.generateForm.value['minA'] != "" && this.generateForm.value['maxA'] != "" && this.generateForm.value['maxA'] <= this.generateForm.value['minA']) {
         this.errorMessage.header = "Generation impossible dans cette configuration !";
-        this.errorMessage.information = "Le maximum de A ne peut pas être inférieure au minimum de A.";
+        this.errorMessage.information = "Le borne supérieure de A ne peut pas être inférieure à la borne inférieure de A.";
         this.errorMessage.display = true;
 
       } else if (this.generateForm.value['minB'] != "" && this.generateForm.value['maxB'] != "" && this.generateForm.value['maxB'] <= this.generateForm.value['minB']) {
         this.errorMessage.header = "Generation impossible dans cette configuration !";
-        this.errorMessage.information = "Le maximum de B ne peut pas être supérieure au minimum de B."
+        this.errorMessage.information = "La borne supérieure de B ne peut pas être inférieure à la borne inférieure de B."
         this.errorMessage.display = true;
 
       } else {

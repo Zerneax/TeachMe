@@ -1,5 +1,13 @@
-<div class="container p-2 text-center" [ngClass]="{'loading': loadingGeneration}">
-  <div class="centered">
+<div class="col-10 col-mx-auto text-center informations">
+
+  <h3> Feuille de calcul </h3>
+  <p> - Choisissez une borne min et max pour le nombre A <br>
+      - Choisissez une borne min et max pour le nombre B <br>
+      - B < A : indique que B sera toujours inférieure à A pour les soustractions </p>
+</div>
+
+<div class="col-10 col-mx-auto text-center" [ngClass]="{'loading': loadingGeneration}">
+  <div class="form-generation">
     <div class="toast toast-error" *ngIf="errorMessage.display">
       <div class="header">
         {{errorMessage.header}}
@@ -35,7 +43,7 @@
             </label>
           </div>
 
-          <div class="input-group m-2">
+          <div class="input-group m-2" style="justify-content: center;">
               <label class="form-checkbox ml-2 tooltip tooltip-bottom" data-tooltip="Indique que la valeur B sera toujours inférieure à A pour les soustractions">
                 <input type="checkbox" name="add" id="add" formControlName="add">
                 <i class="form-icon"></i> Addition
