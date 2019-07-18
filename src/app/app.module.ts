@@ -10,6 +10,7 @@ import { NavigationComponent } from './pages/navigation/navigation.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { CalculComponent } from './pages/calcul/calcul.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CalculComponent } from './pages/calcul/calcul.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
