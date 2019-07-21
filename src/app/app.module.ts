@@ -11,6 +11,9 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { CalculComponent } from './pages/calcul/calcul.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { ContactComponent } from './pages/contact/contact.component';
+import { ContactService } from './services/contact/contact.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,16 +22,18 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     NavigationComponent,
     FooterComponent,
     WelcomeComponent,
-    CalculComponent
+    CalculComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

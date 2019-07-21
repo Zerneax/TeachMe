@@ -22,9 +22,9 @@
     </div>
 
     <div class="columns p-2">
-      <div class="column col-2 m-2"></div>
+      <!-- <div class="column col-2 m-2"></div> -->
 
-      <div class="column col-4 border m-2 text-center postit-calcul">
+      <div class="column col-5 col-mx-auto border text-center postit-calcul">
         <!-- <i class="icon calcul m-2"></i> -->
         <p class="m-2"><fa name="calculator" size="2x"></fa></p>
         <h5> <strong>Feuille de calcul</strong> </h5>
@@ -32,15 +32,18 @@
         <button class="m-2 btn btn-primary" (click)="navigate('calcul')"> En savoir plus ! </button>
       </div>
 
-      <div class="column col-4 border m-2 text-center postit-dobble">
-        <!-- <i class="icon dobble m-2"></i> -->
+      <div class="column col-5 col-mx-auto border text-center postit-dobble">
         <p class="m-2"><fa name="gamepad" size="2x"></fa></p>
         <h5> <strong>Jeu type "Dobble"</strong> </h5>
         <p class="pt-2"> Générez votre jeu de carte avec vos propres images.</p>
         <button class="m-2 btn btn-primary"> En savoir plus ! </button>
       </div>
 
-      <div class="column col-2 m-2"></div>
+      <!-- <div class="column col-2 m-2"></div> -->
+    </div>
+
+    <div class="column col-8 col-mx-auto text-center pt-2">
+      <button class=" btn btn-primary" (click)="navigate('contact')"> Contactez nous ! </button>
     </div>
 
   </div>

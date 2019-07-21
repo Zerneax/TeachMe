@@ -1,0 +1,33 @@
+<div class="container col-8 col-mx-auto text-center margin-2em">
+
+  <div class="toast toast-error" *ngIf="errorMessage">
+    <div class="header">
+      {{errorMessage}}
+    </div>
+  </div>
+
+  <p class="informations pt-2"> Ce formulaire de contact est à votre disposition pour toutes suggestions ou bugs. <br>
+      Pour les suggestions, nous ne garantissons la prise en compte rapide de votre besoin mais il sera lu avec intérêt. <br>
+      Pour tous signalement de bug, merci de bien vouloir décrire le plus précisement celui ci pour une prise en compte rapide.
+  </p>
+
+  <form class="form-group pt-2" [formGroup]="contactForm" (ngSubmit)="submit()">
+
+      <div class="form-group">
+
+        <label class="form-label" for="type-input">Type de requête *</label>
+        <select class="form-select" id="type-input" formControlName="type">
+            <option> Bug </option>
+            <option> Proposition </option>
+        </select>
+
+        <label class="form-label" for="titre-input">Titre *</label>
+        <input class="form-input" type="text" id="titre-input" placeholder="..." formControlName="titre">
+
+        <label class="form-label" for="text-input">Description *</label>
+        <textarea rows="8" class="form-input" placeholder="..." formControlName="description"></textarea>
+      </div>
+
+      <button class="btn btn-primary mt-2" type="submit" [disabled]="contactForm.invalid"> Envoyer </button>
+    </form>
+</div>
