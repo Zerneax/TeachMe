@@ -77,3 +77,19 @@ fa {
     transform: translateY(0);
   }
 }
+
+.animation {
+  animation: welcome .7s linear;
+}
+
+@keyframes welcome {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
